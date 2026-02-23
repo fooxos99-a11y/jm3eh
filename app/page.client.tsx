@@ -208,8 +208,21 @@ export default function Page() {
           {/* أمثلة على أزرار تفتح صور */}
           <ModalItemButton label="بناء الهوية البصرية (الدليل)" icon={Palette} fileType="pdf" />
           <ModalItemButton label="شعار الجمعية (Logo)" icon={ImageIcon} fileType="pdf" fileUrl="https://yaxkgzjlhhsmuuaereul.supabase.co/storage/v1/object/public/123/logo.pdf" />
-          <ModalItemButton label="ورق رسمي (صيغة Word)" icon={FileText} />
-          <ModalItemButton label="ورق رسمي (صيغة صورة)" icon={FileImage} fileType="image" />
+          <ModalItemButton label="ورق رسمي (صيغة Word)" icon={FileText} customContent={
+            <div className="w-full flex flex-col items-center">
+              <a
+                href="https://yaxkgzjlhhsmuuaereul.supabase.co/storage/v1/object/public/123/klesh.docx"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-bold shadow hover:bg-[oklch(0.50_0.1_185)] transition-colors"
+              >
+                <FileDown className="w-5 h-5" />
+                تحميل ملف Word
+              </a>
+            </div>
+          } />
+          <ModalItemButton label="ورق رسمي (صيغة صورة)" icon={FileImage} fileType="image" fileUrl="https://yaxkgzjlhhsmuuaereul.supabase.co/storage/v1/object/public/123/kleshh.png" />
         </FileSection>
 
         <FileSection title="معلومات الجمعية والتواصل">
